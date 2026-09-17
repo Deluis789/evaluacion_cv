@@ -1,0 +1,26 @@
+# Entornos virtuales (Lo que ya sabías)
+.venv/
+venv/
+env/
+ENV/
+
+# Archivos de configuración y secretos (MUY IMPORTANTE)
+
+
+# Base de datos local
+db.sqlite3
+db.sqlite3-journal
+
+# Archivos compilados de Python
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos subidos por usuarios (Media)
+media/
+staticfiles/
+
+# Carpetas de editores de código (Opcional pero recomendado)
+.vscode/
+.idea/

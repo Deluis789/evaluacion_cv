@@ -1,0 +1,15 @@
+services:
+  sinergia-humana-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: sinergia-humana-frontend
+    ports:
+      - "8080:80"
+    environment:
+      - VITE_USE_MOCKS=true
+    restart: unless-stopped
+
+# Cuando el backend Django REST Framework esté disponible, se puede
+# agregar aquí un servicio adicional (por ejemplo "backend") y ajustar
+# VITE_API_BASE_URL en el build del frontend para apuntar a él.
