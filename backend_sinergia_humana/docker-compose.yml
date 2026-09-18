@@ -43,3 +43,5 @@ services:
 
 volumes:
   postgres_data:
+      name: sinergia_humana_postgres_data
+      external: true

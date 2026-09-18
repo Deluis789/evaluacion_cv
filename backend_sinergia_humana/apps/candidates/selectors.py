@@ -1,3 +1,4 @@
+from django.shortcuts import get_object_or_404
 from .models import Candidate
 
 
@@ -6,4 +7,7 @@ def candidate_list():
 
 
 def candidate_get(*, candidate_id):
-    return Candidate.objects.select_related("job").get(id=candidate_id)
+    return get_object_or_404(
+        Candidate.objects.select_related("job"),
+        id=candidate_id,
+    )
