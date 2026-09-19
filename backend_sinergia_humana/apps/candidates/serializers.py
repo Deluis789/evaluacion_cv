@@ -5,7 +5,7 @@ from .models import Candidate
 
 class CandidateSerializer(serializers.ModelSerializer):
     """Lectura — incluye job_id/job_title planos y el objeto cv anidado."""
-    job_id = serializers.UUIDField(source="job_id", read_only=True)
+    job_id = serializers.UUIDField(read_only=True)
     job_title = serializers.CharField(source="job.title", read_only=True)
     cv = serializers.SerializerMethodField()
 

@@ -3,7 +3,7 @@
 venv/
 env/
 ENV/
-
+.env
 # Archivos de configuración y secretos (MUY IMPORTANTE)
 
 

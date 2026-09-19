@@ -14,7 +14,7 @@ class Job(models.Model):
     min_experience_years = models.PositiveSmallIntegerField(default=0)
     required_skills = models.JSONField(default=list, blank=True)
     desired_skills = models.JSONField(default=list, blank=True)
-    education_level = models.CharField(max_length=150, blank=True, default="")
+    education_level = models.CharField(max_length=500, blank=True, default="")
     status = models.CharField(max_length=20, choices=JobStatus.choices, default=JobStatus.DRAFT)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

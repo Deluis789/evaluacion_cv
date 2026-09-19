@@ -123,7 +123,7 @@ const realCandidateService: ICandidateService = {
     return data;
   },
   async analyze(candidateId) {
-    const { data } = await apiClient.post("/ai/analyze/", { candidateId });
+    const { data } = await apiClient.post("/ai/analyze/", { candidateId }, { timeout: 120000 });
     return data;
   },
 };

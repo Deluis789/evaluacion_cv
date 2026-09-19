@@ -1,6 +1,7 @@
 services:
   db:
     image: postgres:16-alpine
+    command: postgres -c max_connections=200
     environment:
       POSTGRES_DB: sinergiaHumana
       POSTGRES_USER: sinergiaDev
@@ -43,5 +44,3 @@ services:
 
 volumes:
   postgres_data:
-      name: sinergia_humana_postgres_data
-      external: true
